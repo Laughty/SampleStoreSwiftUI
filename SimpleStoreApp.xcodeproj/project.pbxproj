@@ -1,0 +1,805 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		571D16DA239293DC000436F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571D16D9239293DC000436F5 /* AppDelegate.swift */; };
+		571D16DC239293DC000436F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571D16DB239293DC000436F5 /* SceneDelegate.swift */; };
+		571D16DE239293DC000436F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571D16DD239293DC000436F5 /* ContentView.swift */; };
+		571D16E0239293DD000436F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 571D16DF239293DD000436F5 /* Assets.xcassets */; };
+		571D16E3239293DD000436F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 571D16E2239293DD000436F5 /* Preview Assets.xcassets */; };
+		571D16E6239293DD000436F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 571D16E4239293DD000436F5 /* LaunchScreen.storyboard */; };
+		571D16F1239293DD000436F5 /* SimpleStoreAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571D16F0239293DD000436F5 /* SimpleStoreAppTests.swift */; };
+		571D16FC239293DD000436F5 /* SimpleStoreAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571D16FB239293DD000436F5 /* SimpleStoreAppUITests.swift */; };
+		571D170B23942101000436F5 /* ForexExchangeRateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571D170A23942101000436F5 /* ForexExchangeRateService.swift */; };
+		571D171A23943600000436F5 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571D171923943600000436F5 /* Configuration.swift */; };
+		571D171C23945F0F000436F5 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571D171B23945F0F000436F5 /* RequestProtocol.swift */; };
+		571D17202394702C000436F5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571D171F2394702C000436F5 /* Result.swift */; };
+		571D172223947CB7000436F5 /* NativeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571D172123947CB7000436F5 /* NativeClient.swift */; };
+		571D172423948522000436F5 /* CommonContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571D172323948522000436F5 /* CommonContext.swift */; };
+		579831712399973100FFE3CA /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579831702399973100FFE3CA /* ServiceProtocol.swift */; };
+		579831782399C11100FFE3CA /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579831772399C11100FFE3CA /* CartView.swift */; };
+		5798317A2399C11C00FFE3CA /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579831792399C11C00FFE3CA /* SummaryView.swift */; };
+		5798317C2399C12B00FFE3CA /* SummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5798317B2399C12B00FFE3CA /* SummaryViewModel.swift */; };
+		5798317E2399C13D00FFE3CA /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5798317D2399C13D00FFE3CA /* ProductView.swift */; };
+		579831812399C67D00FFE3CA /* CurrenciesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579831802399C67D00FFE3CA /* CurrenciesViewModel.swift */; };
+		579831832399C68A00FFE3CA /* CurrenciesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579831822399C68A00FFE3CA /* CurrenciesView.swift */; };
+		579831872399D3C200FFE3CA /* CurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579831862399D3C200FFE3CA /* CurrencyViewModel.swift */; };
+		57AC3D4C239A457A0045FB8A /* SelectedCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AC3D4B239A457A0045FB8A /* SelectedCurrency.swift */; };
+		57D8923F2395D3F700941DC7 /* GetAvailablePairsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D8923E2395D3F700941DC7 /* GetAvailablePairsRequest.swift */; };
+		57D892412395D41A00941DC7 /* GetPairsDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D892402395D41A00941DC7 /* GetPairsDataRequest.swift */; };
+		57D892432395D43A00941DC7 /* GetPairsDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D892422395D43A00941DC7 /* GetPairsDataResponse.swift */; };
+		57D892452395D45600941DC7 /* GetAvailablePairsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D892442395D45600941DC7 /* GetAvailablePairsResponse.swift */; };
+		57D892472395D47300941DC7 /* StoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D892462395D47300941DC7 /* StoreService.swift */; };
+		57D892492395DA9E00941DC7 /* PurchaseProductsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D892482395DA9E00941DC7 /* PurchaseProductsRequest.swift */; };
+		57D8924B2395DACB00941DC7 /* GetProductsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D8924A2395DACB00941DC7 /* GetProductsRequest.swift */; };
+		57D8924D2395DAE700941DC7 /* GetProductsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D8924C2395DAE700941DC7 /* GetProductsResponse.swift */; };
+		57D892502395DC2F00941DC7 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D8924F2395DC2F00941DC7 /* ProductListViewModel.swift */; };
+		57D892522395DC9900941DC7 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D892512395DC9900941DC7 /* ProductListView.swift */; };
+		57D892542395E6DA00941DC7 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D892532395E6DA00941DC7 /* ProductViewModel.swift */; };
+		57E08251239A65000064587D /* ShoppingCartItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E08250239A65000064587D /* ShoppingCartItems.swift */; };
+		57E08253239A7B330064587D /* MockClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E08252239A7B330064587D /* MockClient.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		571D16ED239293DD000436F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 571D16CE239293DC000436F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 571D16D5239293DC000436F5;
+			remoteInfo = SimpleStoreApp;
+		};
+		571D16F8239293DD000436F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 571D16CE239293DC000436F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 571D16D5239293DC000436F5;
+			remoteInfo = SimpleStoreApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		571D16D6239293DC000436F5 /* SimpleStoreApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleStoreApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		571D16D9239293DC000436F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		571D16DB239293DC000436F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		571D16DD239293DC000436F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		571D16DF239293DD000436F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		571D16E2239293DD000436F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		571D16E5239293DD000436F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		571D16E7239293DD000436F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		571D16EC239293DD000436F5 /* SimpleStoreAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleStoreAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		571D16F0239293DD000436F5 /* SimpleStoreAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStoreAppTests.swift; sourceTree = "<group>"; };
+		571D16F2239293DD000436F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		571D16F7239293DD000436F5 /* SimpleStoreAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleStoreAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		571D16FB239293DD000436F5 /* SimpleStoreAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStoreAppUITests.swift; sourceTree = "<group>"; };
+		571D16FD239293DE000436F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		571D170A23942101000436F5 /* ForexExchangeRateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForexExchangeRateService.swift; sourceTree = "<group>"; };
+		571D171723943489000436F5 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		571D1718239434A6000436F5 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		571D171923943600000436F5 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		571D171B23945F0F000436F5 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		571D171F2394702C000436F5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		571D172123947CB7000436F5 /* NativeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeClient.swift; sourceTree = "<group>"; };
+		571D172323948522000436F5 /* CommonContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonContext.swift; sourceTree = "<group>"; };
+		579831702399973100FFE3CA /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		579831772399C11100FFE3CA /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		579831792399C11C00FFE3CA /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		5798317B2399C12B00FFE3CA /* SummaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewModel.swift; sourceTree = "<group>"; };
+		5798317D2399C13D00FFE3CA /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		579831802399C67D00FFE3CA /* CurrenciesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesViewModel.swift; sourceTree = "<group>"; };
+		579831822399C68A00FFE3CA /* CurrenciesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesView.swift; sourceTree = "<group>"; };
+		579831862399D3C200FFE3CA /* CurrencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewModel.swift; sourceTree = "<group>"; };
+		57AC3D4B239A457A0045FB8A /* SelectedCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCurrency.swift; sourceTree = "<group>"; };
+		57D8923E2395D3F700941DC7 /* GetAvailablePairsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAvailablePairsRequest.swift; sourceTree = "<group>"; };
+		57D892402395D41A00941DC7 /* GetPairsDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPairsDataRequest.swift; sourceTree = "<group>"; };
+		57D892422395D43A00941DC7 /* GetPairsDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPairsDataResponse.swift; sourceTree = "<group>"; };
+		57D892442395D45600941DC7 /* GetAvailablePairsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAvailablePairsResponse.swift; sourceTree = "<group>"; };
+		57D892462395D47300941DC7 /* StoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreService.swift; sourceTree = "<group>"; };
+		57D892482395DA9E00941DC7 /* PurchaseProductsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseProductsRequest.swift; sourceTree = "<group>"; };
+		57D8924A2395DACB00941DC7 /* GetProductsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductsRequest.swift; sourceTree = "<group>"; };
+		57D8924C2395DAE700941DC7 /* GetProductsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductsResponse.swift; sourceTree = "<group>"; };
+		57D8924F2395DC2F00941DC7 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
+		57D892512395DC9900941DC7 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
+		57D892532395E6DA00941DC7 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		57E08250239A65000064587D /* ShoppingCartItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartItems.swift; sourceTree = "<group>"; };
+		57E08252239A7B330064587D /* MockClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockClient.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		571D16D3239293DC000436F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		571D16E9239293DD000436F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		571D16F4239293DD000436F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		571D16CD239293DC000436F5 = {
+			isa = PBXGroup;
+			children = (
+				571D16D8239293DC000436F5 /* SimpleStoreApp */,
+				571D16EF239293DD000436F5 /* SimpleStoreAppTests */,
+				571D16FA239293DD000436F5 /* SimpleStoreAppUITests */,
+				571D16D7239293DC000436F5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		571D16D7239293DC000436F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				571D16D6239293DC000436F5 /* SimpleStoreApp.app */,
+				571D16EC239293DD000436F5 /* SimpleStoreAppTests.xctest */,
+				571D16F7239293DD000436F5 /* SimpleStoreAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		571D16D8239293DC000436F5 /* SimpleStoreApp */ = {
+			isa = PBXGroup;
+			children = (
+				57D8924E2395DC0D00941DC7 /* Scenes */,
+				571D170E239422BD000436F5 /* Utilities */,
+				571D170D239422B5000436F5 /* Common */,
+				571D1709239420DF000436F5 /* Services */,
+				571D16D9239293DC000436F5 /* AppDelegate.swift */,
+				571D16DB239293DC000436F5 /* SceneDelegate.swift */,
+				571D16DD239293DC000436F5 /* ContentView.swift */,
+				571D16DF239293DD000436F5 /* Assets.xcassets */,
+				571D16E4239293DD000436F5 /* LaunchScreen.storyboard */,
+				571D16E7239293DD000436F5 /* Info.plist */,
+				571D16E1239293DD000436F5 /* Preview Content */,
+				571D171723943489000436F5 /* Development.xcconfig */,
+				571D1718239434A6000436F5 /* Production.xcconfig */,
+				571D171923943600000436F5 /* Configuration.swift */,
+			);
+			path = SimpleStoreApp;
+			sourceTree = "<group>";
+		};
+		571D16E1239293DD000436F5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				571D16E2239293DD000436F5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		571D16EF239293DD000436F5 /* SimpleStoreAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				571D16F0239293DD000436F5 /* SimpleStoreAppTests.swift */,
+				571D16F2239293DD000436F5 /* Info.plist */,
+			);
+			path = SimpleStoreAppTests;
+			sourceTree = "<group>";
+		};
+		571D16FA239293DD000436F5 /* SimpleStoreAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				571D16FB239293DD000436F5 /* SimpleStoreAppUITests.swift */,
+				571D16FD239293DE000436F5 /* Info.plist */,
+			);
+			path = SimpleStoreAppUITests;
+			sourceTree = "<group>";
+		};
+		571D1709239420DF000436F5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				57D8923D2395D3D400941DC7 /* Store */,
+				57D8923C2395D3C800941DC7 /* Forex */,
+				571D171B23945F0F000436F5 /* RequestProtocol.swift */,
+				571D171F2394702C000436F5 /* Result.swift */,
+				571D172123947CB7000436F5 /* NativeClient.swift */,
+				579831702399973100FFE3CA /* ServiceProtocol.swift */,
+				57E08252239A7B330064587D /* MockClient.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		571D170D239422B5000436F5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				571D172323948522000436F5 /* CommonContext.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		571D170E239422BD000436F5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		579831722399C0BD00FFE3CA /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+				57D8924F2395DC2F00941DC7 /* ProductListViewModel.swift */,
+				57D892512395DC9900941DC7 /* ProductListView.swift */,
+				57D892532395E6DA00941DC7 /* ProductViewModel.swift */,
+				5798317D2399C13D00FFE3CA /* ProductView.swift */,
+			);
+			path = ProductList;
+			sourceTree = "<group>";
+		};
+		579831732399C0D300FFE3CA /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				579831772399C11100FFE3CA /* CartView.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		579831742399C0DC00FFE3CA /* Summary */ = {
+			isa = PBXGroup;
+			children = (
+				579831792399C11C00FFE3CA /* SummaryView.swift */,
+				5798317B2399C12B00FFE3CA /* SummaryViewModel.swift */,
+			);
+			path = Summary;
+			sourceTree = "<group>";
+		};
+		5798317F2399C66000FFE3CA /* Currency */ = {
+			isa = PBXGroup;
+			children = (
+				579831802399C67D00FFE3CA /* CurrenciesViewModel.swift */,
+				579831822399C68A00FFE3CA /* CurrenciesView.swift */,
+				579831862399D3C200FFE3CA /* CurrencyViewModel.swift */,
+			);
+			path = Currency;
+			sourceTree = "<group>";
+		};
+		57AC3D4A239A455A0045FB8A /* EnvironmentObjects */ = {
+			isa = PBXGroup;
+			children = (
+				57AC3D4B239A457A0045FB8A /* SelectedCurrency.swift */,
+				57E08250239A65000064587D /* ShoppingCartItems.swift */,
+			);
+			path = EnvironmentObjects;
+			sourceTree = "<group>";
+		};
+		57D8923C2395D3C800941DC7 /* Forex */ = {
+			isa = PBXGroup;
+			children = (
+				571D170A23942101000436F5 /* ForexExchangeRateService.swift */,
+				57D8923E2395D3F700941DC7 /* GetAvailablePairsRequest.swift */,
+				57D892402395D41A00941DC7 /* GetPairsDataRequest.swift */,
+				57D892422395D43A00941DC7 /* GetPairsDataResponse.swift */,
+				57D892442395D45600941DC7 /* GetAvailablePairsResponse.swift */,
+			);
+			path = Forex;
+			sourceTree = "<group>";
+		};
+		57D8923D2395D3D400941DC7 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				57D892462395D47300941DC7 /* StoreService.swift */,
+				57D892482395DA9E00941DC7 /* PurchaseProductsRequest.swift */,
+				57D8924A2395DACB00941DC7 /* GetProductsRequest.swift */,
+				57D8924C2395DAE700941DC7 /* GetProductsResponse.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		57D8924E2395DC0D00941DC7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				57AC3D4A239A455A0045FB8A /* EnvironmentObjects */,
+				5798317F2399C66000FFE3CA /* Currency */,
+				579831742399C0DC00FFE3CA /* Summary */,
+				579831732399C0D300FFE3CA /* Cart */,
+				579831722399C0BD00FFE3CA /* ProductList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		571D16D5239293DC000436F5 /* SimpleStoreApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 571D1700239293DE000436F5 /* Build configuration list for PBXNativeTarget "SimpleStoreApp" */;
+			buildPhases = (
+				571D16D2239293DC000436F5 /* Sources */,
+				571D16D3239293DC000436F5 /* Frameworks */,
+				571D16D4239293DC000436F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleStoreApp;
+			productName = SimpleStoreApp;
+			productReference = 571D16D6239293DC000436F5 /* SimpleStoreApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		571D16EB239293DD000436F5 /* SimpleStoreAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 571D1703239293DE000436F5 /* Build configuration list for PBXNativeTarget "SimpleStoreAppTests" */;
+			buildPhases = (
+				571D16E8239293DD000436F5 /* Sources */,
+				571D16E9239293DD000436F5 /* Frameworks */,
+				571D16EA239293DD000436F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				571D16EE239293DD000436F5 /* PBXTargetDependency */,
+			);
+			name = SimpleStoreAppTests;
+			productName = SimpleStoreAppTests;
+			productReference = 571D16EC239293DD000436F5 /* SimpleStoreAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		571D16F6239293DD000436F5 /* SimpleStoreAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 571D1706239293DE000436F5 /* Build configuration list for PBXNativeTarget "SimpleStoreAppUITests" */;
+			buildPhases = (
+				571D16F3239293DD000436F5 /* Sources */,
+				571D16F4239293DD000436F5 /* Frameworks */,
+				571D16F5239293DD000436F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				571D16F9239293DD000436F5 /* PBXTargetDependency */,
+			);
+			name = SimpleStoreAppUITests;
+			productName = SimpleStoreAppUITests;
+			productReference = 571D16F7239293DD000436F5 /* SimpleStoreAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		571D16CE239293DC000436F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Piotr Rola";
+				TargetAttributes = {
+					571D16D5239293DC000436F5 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					571D16EB239293DD000436F5 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 571D16D5239293DC000436F5;
+					};
+					571D16F6239293DD000436F5 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 571D16D5239293DC000436F5;
+					};
+				};
+			};
+			buildConfigurationList = 571D16D1239293DC000436F5 /* Build configuration list for PBXProject "SimpleStoreApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 571D16CD239293DC000436F5;
+			productRefGroup = 571D16D7239293DC000436F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				571D16D5239293DC000436F5 /* SimpleStoreApp */,
+				571D16EB239293DD000436F5 /* SimpleStoreAppTests */,
+				571D16F6239293DD000436F5 /* SimpleStoreAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		571D16D4239293DC000436F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				571D16E6239293DD000436F5 /* LaunchScreen.storyboard in Resources */,
+				571D16E3239293DD000436F5 /* Preview Assets.xcassets in Resources */,
+				571D16E0239293DD000436F5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		571D16EA239293DD000436F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		571D16F5239293DD000436F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		571D16D2239293DC000436F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57D892502395DC2F00941DC7 /* ProductListViewModel.swift in Sources */,
+				57D892522395DC9900941DC7 /* ProductListView.swift in Sources */,
+				57D8924B2395DACB00941DC7 /* GetProductsRequest.swift in Sources */,
+				57E08251239A65000064587D /* ShoppingCartItems.swift in Sources */,
+				579831872399D3C200FFE3CA /* CurrencyViewModel.swift in Sources */,
+				571D16DA239293DC000436F5 /* AppDelegate.swift in Sources */,
+				57D892412395D41A00941DC7 /* GetPairsDataRequest.swift in Sources */,
+				5798317A2399C11C00FFE3CA /* SummaryView.swift in Sources */,
+				579831782399C11100FFE3CA /* CartView.swift in Sources */,
+				571D171A23943600000436F5 /* Configuration.swift in Sources */,
+				571D170B23942101000436F5 /* ForexExchangeRateService.swift in Sources */,
+				57D8924D2395DAE700941DC7 /* GetProductsResponse.swift in Sources */,
+				571D17202394702C000436F5 /* Result.swift in Sources */,
+				579831832399C68A00FFE3CA /* CurrenciesView.swift in Sources */,
+				57E08253239A7B330064587D /* MockClient.swift in Sources */,
+				57D892472395D47300941DC7 /* StoreService.swift in Sources */,
+				571D171C23945F0F000436F5 /* RequestProtocol.swift in Sources */,
+				57D892452395D45600941DC7 /* GetAvailablePairsResponse.swift in Sources */,
+				579831712399973100FFE3CA /* ServiceProtocol.swift in Sources */,
+				571D16DC239293DC000436F5 /* SceneDelegate.swift in Sources */,
+				57D892492395DA9E00941DC7 /* PurchaseProductsRequest.swift in Sources */,
+				57D892542395E6DA00941DC7 /* ProductViewModel.swift in Sources */,
+				57D8923F2395D3F700941DC7 /* GetAvailablePairsRequest.swift in Sources */,
+				5798317E2399C13D00FFE3CA /* ProductView.swift in Sources */,
+				571D172423948522000436F5 /* CommonContext.swift in Sources */,
+				5798317C2399C12B00FFE3CA /* SummaryViewModel.swift in Sources */,
+				57AC3D4C239A457A0045FB8A /* SelectedCurrency.swift in Sources */,
+				57D892432395D43A00941DC7 /* GetPairsDataResponse.swift in Sources */,
+				571D16DE239293DC000436F5 /* ContentView.swift in Sources */,
+				579831812399C67D00FFE3CA /* CurrenciesViewModel.swift in Sources */,
+				571D172223947CB7000436F5 /* NativeClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		571D16E8239293DD000436F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				571D16F1239293DD000436F5 /* SimpleStoreAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		571D16F3239293DD000436F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				571D16FC239293DD000436F5 /* SimpleStoreAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		571D16EE239293DD000436F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 571D16D5239293DC000436F5 /* SimpleStoreApp */;
+			targetProxy = 571D16ED239293DD000436F5 /* PBXContainerItemProxy */;
+		};
+		571D16F9239293DD000436F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 571D16D5239293DC000436F5 /* SimpleStoreApp */;
+			targetProxy = 571D16F8239293DD000436F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		571D16E4239293DD000436F5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				571D16E5239293DD000436F5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		571D16FE239293DE000436F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 571D171723943489000436F5 /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		571D16FF239293DE000436F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 571D1718239434A6000436F5 /* Production.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		571D1701239293DE000436F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SimpleStoreApp/Preview Content\"";
+				DEVELOPMENT_TEAM = STZX823UT2;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = SimpleStoreApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = restapi.test.SimpleStoreApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		571D1702239293DE000436F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SimpleStoreApp/Preview Content\"";
+				DEVELOPMENT_TEAM = STZX823UT2;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = SimpleStoreApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = restapi.test.SimpleStoreApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		571D1704239293DE000436F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = STZX823UT2;
+				INFOPLIST_FILE = SimpleStoreAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = restapi.test.SimpleStoreAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleStoreApp.app/SimpleStoreApp";
+			};
+			name = Debug;
+		};
+		571D1705239293DE000436F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = STZX823UT2;
+				INFOPLIST_FILE = SimpleStoreAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = restapi.test.SimpleStoreAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleStoreApp.app/SimpleStoreApp";
+			};
+			name = Release;
+		};
+		571D1707239293DE000436F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = STZX823UT2;
+				INFOPLIST_FILE = SimpleStoreAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = restapi.test.SimpleStoreAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleStoreApp;
+			};
+			name = Debug;
+		};
+		571D1708239293DE000436F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = STZX823UT2;
+				INFOPLIST_FILE = SimpleStoreAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = restapi.test.SimpleStoreAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleStoreApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		571D16D1239293DC000436F5 /* Build configuration list for PBXProject "SimpleStoreApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				571D16FE239293DE000436F5 /* Debug */,
+				571D16FF239293DE000436F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		571D1700239293DE000436F5 /* Build configuration list for PBXNativeTarget "SimpleStoreApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				571D1701239293DE000436F5 /* Debug */,
+				571D1702239293DE000436F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		571D1703239293DE000436F5 /* Build configuration list for PBXNativeTarget "SimpleStoreAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				571D1704239293DE000436F5 /* Debug */,
+				571D1705239293DE000436F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		571D1706239293DE000436F5 /* Build configuration list for PBXNativeTarget "SimpleStoreAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				571D1707239293DE000436F5 /* Debug */,
+				571D1708239293DE000436F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 571D16CE239293DC000436F5 /* Project object */;
+}

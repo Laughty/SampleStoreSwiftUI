@@ -1,0 +1,12 @@
+//
+//  Production.xcconfig
+//  SimpleStoreApp
+//
+//  Created by Piotr Rola on 01/12/2019.
+//  Copyright © 2019 Piotr Rola. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+API_BASE_URL = freeforexapi.com/
