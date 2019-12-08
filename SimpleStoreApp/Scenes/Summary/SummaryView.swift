@@ -18,6 +18,8 @@ enum SummaryBuilder {
 
 struct SummaryView : View {
 
+    @EnvironmentObject var selectedCurrency: SelectedCurrency
+
     @ObservedObject
     var viewModel: SummaryViewModel
 
@@ -37,8 +39,8 @@ private extension SummaryView {
 
     var currencySectionSection: some View {
         Section {
-            NavigationLink(destination: viewModel.currenciesView.environmentObject(viewModel.selectedCurrency)) {
-                Text(viewModel.selectedCurrency.name).padding()
+            NavigationLink(destination: viewModel.currenciesView) {
+                Text(selectedCurrency.name).padding()
             }
         }
     }
@@ -47,7 +49,7 @@ private extension SummaryView {
         Section {
             Text("FINAL PRICE IS: \(viewModel.finalPrice)")
                 .onAppear{
-                    self.viewModel.calculateRateForNewCurrency(selectedCurrency: self.viewModel.selectedCurrency)}
+                    self.viewModel.calculateRateForNewCurrency(selectedCurrency: self.selectedCurrency)}
         }
     }
 }

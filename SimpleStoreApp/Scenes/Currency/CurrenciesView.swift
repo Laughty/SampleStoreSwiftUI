@@ -32,9 +32,7 @@ struct CurrenciesView : View {
         VStack {
             selectedCurrencySection
             currenciesListSection
-        }.navigationBarTitle(Text("Currencies"), displayMode: .inline).onAppear {
-            self.viewModel.fetchCurrencies(selectedCurrency: self.selectedCurrency.name)
-        }
+        }.navigationBarTitle(Text("Currencies"), displayMode: .inline)
     }
 }
 
@@ -42,7 +40,7 @@ extension CurrenciesView {
 
     var selectedCurrencySection: some View {
         Section {
-            Text(selectedCurrency.name).padding()
+            Text(self.selectedCurrency.name).padding()
         }
     }
 

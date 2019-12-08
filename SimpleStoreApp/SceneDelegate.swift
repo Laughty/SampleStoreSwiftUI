@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             commonContext = DefaultContext()
         }
         
-        let productListView = ProductListView(commonContext)
+        let productListView = ProductListView(commonContext).environmentObject(SelectedCurrency())
         
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

@@ -12,14 +12,12 @@ struct SummaryContext {
 
     let commonContext: CommonContext
     let baseCurrency: String
-    let selectedCurrency: String
     let productsInCart: [ProductViewModel]
 
-    init(_ commonContext: CommonContext, productsInCart: [ProductViewModel], baseCurrency: String, selectedCurrency: String){
+    init(_ commonContext: CommonContext, productsInCart: [ProductViewModel], baseCurrency: String){
         self.commonContext = commonContext
         self.baseCurrency = baseCurrency
         self.productsInCart = productsInCart
-        self.selectedCurrency = selectedCurrency
     }
 }
 
@@ -30,8 +28,6 @@ final class SummaryViewModel: ObservableObject {
     private var baseCurrency: String
     private let productsInCart: [ProductViewModel]
 
-    var selectedCurrency = SelectedCurrency()
-
     @Published var finalPrice: String = ""
 
     init(_ context: SummaryContext) {
@@ -39,7 +35,6 @@ final class SummaryViewModel: ObservableObject {
         self.commonContext = context.commonContext
         self.baseCurrency = context.baseCurrency
         self.productsInCart = context.productsInCart
-        self.selectedCurrency.name = context.selectedCurrency
         updateFinalPrice()
     }
 

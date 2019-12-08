@@ -29,16 +29,20 @@ final class CurrenciesViewModel: ObservableObject {
     init(_ context: CurrenciesContext) {
         forexService = ForexExchangeRateService(apiClient: context.commonContext.apiClient)
         baseCurrency = context.baseCurrency
+        fetchCurrencies()
     }
 
-    func fetchCurrencies(selectedCurrency: String) {
+    private func fetchCurrencies() {
         forexService.getAvailablePairs(GetAvailablePairsRequest(), results: { [weak self] (currencies, error) in
-            guard let strSelf = self, error == nil else { return }
             if let currencies = currencies {
-                self?.currencies = currencies.filter{ $0.contains(strSelf.baseCurrency) }
-                    .map{ CurrencyViewModel($0.replacingOccurrences(of: strSelf.baseCurrency, with: "")) }
-                    .filter{ !$0.name.contains(selectedCurrency) }
+                self?.updateCurreciesList(with: currencies)
             }
         })
+    }
+
+    private func updateCurreciesList(with currencies: [String]) {
+        self.currencies = currencies.filter{ $0.contains(baseCurrency) }
+            .map{ CurrencyViewModel($0.replacingOccurrences(of: baseCurrency, with: "")) }
+        self.currencies.insert(CurrencyViewModel(baseCurrency), at: 0)
     }
 }

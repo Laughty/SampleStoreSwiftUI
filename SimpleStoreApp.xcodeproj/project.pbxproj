@@ -156,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				57D8924E2395DC0D00941DC7 /* Scenes */,
-				571D170E239422BD000436F5 /* Utilities */,
 				571D170D239422B5000436F5 /* Common */,
 				571D1709239420DF000436F5 /* Services */,
 				571D16D9239293DC000436F5 /* AppDelegate.swift */,
@@ -219,13 +218,6 @@
 				571D172323948522000436F5 /* CommonContext.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		571D170E239422BD000436F5 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utilities;
 			sourceTree = "<group>";
 		};
 		579831722399C0BD00FFE3CA /* ProductList */ = {
