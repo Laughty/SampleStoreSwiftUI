@@ -29,12 +29,10 @@ struct CurrenciesView : View {
     }
 
     var body: some View {
-        NavigationView {
-            VStack {
+        VStack {
             selectedCurrencySection
             currenciesListSection
-            }.navigationBarTitle(Text("Currencies"), displayMode: .inline)
-        }.onAppear {
+        }.navigationBarTitle(Text("Currencies"), displayMode: .inline).onAppear {
             self.viewModel.fetchCurrencies(selectedCurrency: self.selectedCurrency.name)
         }
     }

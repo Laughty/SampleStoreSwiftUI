@@ -22,11 +22,9 @@ struct CartView : View {
     @EnvironmentObject var productsInCart: ShoppingCartItems
 
     var body: some View {
-        NavigationView {
-            VStack {
+        VStack {
             productListSection
-            }.navigationBarTitle(Text("Cart"), displayMode: .inline)
-        }
+        }.navigationBarTitle(Text("Cart"), displayMode: .inline)
     }
 }
 

@@ -26,12 +26,10 @@ struct SummaryView : View {
     }
 
     var body: some View {
-        NavigationView {
-            VStack {
+        VStack {
             currencySectionSection
             summarySection
-            }.navigationBarTitle(Text("Summary"), displayMode: .inline)
-        }
+        }.navigationBarTitle(Text("Summary"), displayMode: .inline)
     }
 }
 
