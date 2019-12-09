@@ -30,12 +30,22 @@ struct SummaryView : View {
     var body: some View {
         VStack {
             currencySectionSection
-            summarySection
+            if viewModel.finalPrice.isEmpty {
+                messageSection
+            } else {
+                summarySection
+            }
         }.navigationBarTitle(Text("Summary"), displayMode: .inline)
     }
 }
 
 private extension SummaryView {
+
+    var messageSection: some View {
+        Section {
+            Text(viewModel.message)
+        }
+    }
 
     var currencySectionSection: some View {
         Section {

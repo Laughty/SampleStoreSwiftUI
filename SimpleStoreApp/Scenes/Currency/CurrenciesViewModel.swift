@@ -21,19 +21,29 @@ struct CurrenciesContext {
 
 final class CurrenciesViewModel: ObservableObject {
 
+    private let emptyStateMessage = "Please wait... currencies are loading"
+
     private let baseCurrency: String
-    private let forexService: ForexExchangeRateService
+    private let forexService: ForexExchangeRateServiceProtocol
 
     @Published var currencies = [CurrencyViewModel]()
+    @Published var message: String = ""
 
-    init(_ context: CurrenciesContext) {
-        forexService = ForexExchangeRateService(apiClient: context.commonContext.apiClient)
+    init(_ context: CurrenciesContext,
+         forexService: ForexExchangeRateServiceProtocol? = nil) {
+        self.forexService = forexService == nil ? ForexExchangeRateService(apiClient: context.commonContext.apiClient) : forexService!
         baseCurrency = context.baseCurrency
+        message = emptyStateMessage
         fetchCurrencies()
     }
 
     private func fetchCurrencies() {
         forexService.getAvailablePairs(GetAvailablePairsRequest(), results: { [weak self] (currencies, error) in
+            guard error == nil else {
+                self?.message = error!
+                return
+            }
+
             if let currencies = currencies {
                 self?.updateCurreciesList(with: currencies)
             }

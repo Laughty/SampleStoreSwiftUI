@@ -30,13 +30,23 @@ struct CurrenciesView : View {
 
     var body: some View {
         VStack {
-            selectedCurrencySection
-            currenciesListSection
+            if viewModel.currencies.isEmpty {
+                messageSection
+            } else {
+                selectedCurrencySection
+                currenciesListSection
+            }
         }.navigationBarTitle(Text("Currencies"), displayMode: .inline)
     }
 }
 
 extension CurrenciesView {
+
+    var messageSection: some View {
+        Section {
+            Text(viewModel.message)
+        }
+    }
 
     var selectedCurrencySection: some View {
         Section {

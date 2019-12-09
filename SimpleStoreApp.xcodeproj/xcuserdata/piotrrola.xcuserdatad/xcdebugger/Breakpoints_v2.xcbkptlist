@@ -286,9 +286,9 @@
             filePath = "SimpleStoreApp/Scenes/ProductList/ProductListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "init(_:)"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "init(_:storeService:forexService:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -318,8 +318,8 @@
             filePath = "SimpleStoreApp/Scenes/ProductList/ProductListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "products"
             landmarkType = "24">
          </BreakpointContent>
@@ -334,8 +334,8 @@
             filePath = "SimpleStoreApp/Scenes/Currency/CurrenciesViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49">
+            startingLineNumber = "59"
+            endingLineNumber = "59">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -348,8 +348,8 @@
             filePath = "SimpleStoreApp/Scenes/ProductList/ProductListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "calculateRateForNewCurrency(selectedCurrency:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -380,8 +380,8 @@
             filePath = "SimpleStoreApp/Scenes/ProductList/ProductListView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "productListSection"
             landmarkType = "24">
          </BreakpointContent>
@@ -396,8 +396,8 @@
             filePath = "SimpleStoreApp/Scenes/ProductList/ProductListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "currenciesView"
             landmarkType = "24">
          </BreakpointContent>
@@ -412,8 +412,8 @@
             filePath = "SimpleStoreApp/Scenes/Summary/SummaryViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "updateFinalPrice()"
             landmarkType = "7">
          </BreakpointContent>
@@ -428,8 +428,8 @@
             filePath = "SimpleStoreApp/Scenes/Summary/SummaryViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "calculateRateForNewCurrency(selectedCurrency:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -444,8 +444,8 @@
             filePath = "SimpleStoreApp/Scenes/Summary/SummaryViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "updateFinalPrice()"
             landmarkType = "7">
          </BreakpointContent>
@@ -460,8 +460,8 @@
             filePath = "SimpleStoreApp/Scenes/ProductList/ProductListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "summaryView"
             landmarkType = "24">
          </BreakpointContent>
@@ -476,8 +476,8 @@
             filePath = "SimpleStoreApp/Scenes/ProductList/ProductListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "cartView"
             landmarkType = "24">
          </BreakpointContent>
@@ -492,8 +492,8 @@
             filePath = "SimpleStoreApp/Scenes/ProductList/ProductListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "calculateRateForNewCurrency(selectedCurrency:)"
             landmarkType = "7">
             <Locations>
@@ -508,9 +508,9 @@
                   urlString = "file:///Users/piotrrola/Documents/SampleStoreSwiftUI/SimpleStoreApp/Scenes/ProductList/ProductListViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "1037">
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "840">
                </Location>
                <Location
                   uuid = "E31C94C5-E6EC-48F2-8DAF-A4EC8C012CF0 - dfe8b2139faa0920"
@@ -523,8 +523,8 @@
                   urlString = "file:///Users/piotrrola/Documents/SampleStoreSwiftUI/SimpleStoreApp/Scenes/ProductList/ProductListViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
                   offsetFromSymbolStart = "241">
                </Location>
             </Locations>
@@ -540,8 +540,8 @@
             filePath = "SimpleStoreApp/Scenes/ProductList/ProductListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "calculateRateForNewCurrency(selectedCurrency:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -556,8 +556,8 @@
             filePath = "SimpleStoreApp/Scenes/ProductList/ProductListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "calculateRateForNewCurrency(selectedCurrency:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -572,8 +572,8 @@
             filePath = "SimpleStoreApp/Scenes/ProductList/ProductListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "calculateRateForNewCurrency(selectedCurrency:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -588,8 +588,198 @@
             filePath = "SimpleStoreApp/Scenes/ProductList/ProductListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "calculateRateForNewCurrency(selectedCurrency:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C60E30E8-FF50-45B8-AB42-3AFC5CD7B754"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SimpleStoreApp/Scenes/Currency/CurrenciesViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "init(_:forexService:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DDB49337-7AF8-4C29-8696-CB7EAA25A1F4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SimpleStoreAppTests/Stubs/StoreServiceStub.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "675B6E71-EBE5-426A-9B46-63B4E33A3530"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SimpleStoreAppTests/ProductListTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "testSuccefulPricesRecalculationSameCurrency()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "98A8456C-0046-4B85-948B-8593145BF3AC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SimpleStoreApp/Scenes/ProductList/ProductListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "calculateRateForNewCurrency(selectedCurrency:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A43EBCF-ED6F-48C8-9704-3B56940423C6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SimpleStoreApp/Scenes/ProductList/ProductListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "calculateRateForNewCurrency(selectedCurrency:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "724A0952-E344-48DC-AEF3-025688C568AE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SimpleStoreApp/Scenes/ProductList/ProductListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "calculateRateForNewCurrency(selectedCurrency:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "94CB5C09-9200-4A80-9B0D-A475FBC3B727"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SimpleStoreApp/Scenes/ProductList/ProductListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "calculatePricesWithRate(rate:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "94CB5C09-9200-4A80-9B0D-A475FBC3B727 - 4a5992e2de885660"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SimpleStoreApp.ProductListViewModel.(calculatePricesWithRate in _B55D073002C903450F361BEC1CE87E9F)(rate: Swift.Optional&lt;Swift.Double&gt;) -&gt; ()"
+                  moduleName = "SimpleStoreApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piotrrola/Documents/SampleStoreSwiftUI/SimpleStoreApp/Scenes/ProductList/ProductListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "94CB5C09-9200-4A80-9B0D-A475FBC3B727 - a9f9992fc41070c3"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SimpleStoreApp.Product) -&gt; SimpleStoreApp.ProductViewModel in SimpleStoreApp.ProductListViewModel.(calculatePricesWithRate in _B55D073002C903450F361BEC1CE87E9F)(rate: Swift.Optional&lt;Swift.Double&gt;) -&gt; ()"
+                  moduleName = "SimpleStoreApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piotrrola/Documents/SampleStoreSwiftUI/SimpleStoreApp/Scenes/ProductList/ProductListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "43">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D0C6439B-9674-4DDD-9C29-1E52B350BADA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SimpleStoreApp/Scenes/ProductList/ProductListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "calculatePricesWithRate(rate:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "30E349E2-8831-42A6-A736-0462275D9E34"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SimpleStoreApp/Scenes/Summary/SummaryViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "calculateRateForNewCurrency(selectedCurrency:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C5B2306D-ADFE-46CB-B336-A05C6D16AE26"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SimpleStoreApp/Scenes/Summary/SummaryViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "calculateRateForNewCurrency(selectedCurrency:)"
             landmarkType = "7">
          </BreakpointContent>

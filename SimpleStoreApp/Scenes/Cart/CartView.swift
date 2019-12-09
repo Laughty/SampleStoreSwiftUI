@@ -36,7 +36,7 @@ private extension CartView {
                 HStack {
                     Text(product.name).padding()
                     Text(product.price).padding()
-                    Text("Tap to remove").padding()
+                    Text("Tap to remove").padding().foregroundColor(.red)
                 }.onTapGesture {
                     if let index = self.productsInCart.items.firstIndex(where: { $0.id == product.id }) {
                         self.productsInCart.items.remove(at: index)

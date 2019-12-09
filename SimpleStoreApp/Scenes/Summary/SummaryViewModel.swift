@@ -23,15 +23,17 @@ struct SummaryContext {
 
 final class SummaryViewModel: ObservableObject {
 
-    private let forexService: ForexExchangeRateService
+    private let forexService: ForexExchangeRateServiceProtocol
     private let commonContext: CommonContext
     private var baseCurrency: String
     private let productsInCart: [ProductViewModel]
 
     @Published var finalPrice: String = ""
+    @Published var message: String = ""
 
-    init(_ context: SummaryContext) {
-        self.forexService = ForexExchangeRateService(apiClient: context.commonContext.apiClient)
+    init(_ context: SummaryContext,
+     forexService: ForexExchangeRateServiceProtocol? = nil) {
+        self.forexService = forexService == nil ? ForexExchangeRateService(apiClient: context.commonContext.apiClient) : forexService!
         self.commonContext = context.commonContext
         self.baseCurrency = context.baseCurrency
         self.productsInCart = context.productsInCart
@@ -45,9 +47,12 @@ final class SummaryViewModel: ObservableObject {
             return
         }
 
-        let pairName = baseCurrency+selectedCurrency.name
+        let pairName = selectedCurrency.name+baseCurrency
         forexService.getExchangeRates(GetPairsDataRequest(pairName), results: { [weak self] (currencyRate, error) in
-            guard error == nil else { return }
+            guard error == nil else {
+                self?.finalPrice = ""
+                self?.message = error!
+                return }
             if let currencyRate = currencyRate {
                 self?.calculatePricesWithRate(rate: currencyRate[pairName]?.rate)
             }

@@ -29,10 +29,10 @@ class  ProductViewModel: Identifiable {
     }
 
     var price: String {
-        return String(format: "%.02f", product.price * rate)
+        return String(format: "%.02f", product.price / rate)
     }
 
     var numericPrice: Double {
-        return product.price * rate
+        return product.price / rate
     }
 }

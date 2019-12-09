@@ -11,7 +11,6 @@ import Foundation
 protocol StoreServiceProtocol {
 
     func getProducts(_ request: GetProductsRequest, results: @escaping (GetProductsResponse?, String?) -> ())
-    func purchaseProducts(_ request: PurchaseProductsRequest, results: @escaping (String?) -> ())
 }
 
 class StoreService: StoreServiceProtocol {
@@ -31,9 +30,4 @@ class StoreService: StoreServiceProtocol {
 
         results(GetProductsResponse(products: products), nil)
     }
-
-    func purchaseProducts(_ request: PurchaseProductsRequest, results: @escaping (String?) -> ()) {
-
-    }
-
 }

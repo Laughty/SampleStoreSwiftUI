@@ -24,8 +24,12 @@ struct ProductListView : View {
     var body: some View {
         NavigationView {
             VStack {
-                currencySectionSection
-                productListSection
+                if viewModel.productsList.isEmpty {
+                    messageSection
+                } else {
+                    currencySectionSection
+                    productListSection
+                }
             }.navigationBarItems(leading:
                 NavigationLink(destination: viewModel.summaryView) {
                     Text("Checkout")
@@ -41,6 +45,12 @@ struct ProductListView : View {
 
 private extension ProductListView {
 
+    var messageSection: some View {
+        Section {
+            Text(viewModel.message)
+        }
+    }
+
     var currencySectionSection: some View {
         Section {
             NavigationLink(destination: viewModel.currenciesView) {
@@ -55,6 +65,7 @@ private extension ProductListView {
                 HStack {
                     Text(product.name).padding()
                     Text(product.price).padding()
+                    Text("Tap to add").padding().foregroundColor(.green)
                 }.onTapGesture {
                     self.viewModel.addProductToCart(product)
                 }

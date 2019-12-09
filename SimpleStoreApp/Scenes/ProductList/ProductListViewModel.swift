@@ -10,8 +10,10 @@ import SwiftUI
 
 final class ProductListViewModel: ObservableObject {
 
+    private let emptyStateMessage = "Please wait... products are loading"
+
     private let storeService: StoreServiceProtocol
-    private let forexService: ForexExchangeRateService
+    private let forexService: ForexExchangeRateServiceProtocol
     private let commonContext: CommonContext
     private var baseCurrency: String = "USD"
 
@@ -24,17 +26,21 @@ final class ProductListViewModel: ObservableObject {
     @Published var productsList = [ProductViewModel]()
     @Published var productsInCart = ShoppingCartItems()
     @Published var numberOfProductsInCart: Int = 0
+    @Published var message: String = ""
 
-    init(_ commonContext: CommonContext) {
-        self.storeService = StoreService(apiClient: commonContext.apiClient)
-        self.forexService = ForexExchangeRateService(apiClient: commonContext.apiClient)
+    init(_ commonContext: CommonContext,
+         storeService: StoreServiceProtocol? = nil,
+         forexService: ForexExchangeRateServiceProtocol? = nil) {
+        self.storeService =  storeService == nil ? StoreService(apiClient: commonContext.apiClient) : storeService!
+        self.forexService = forexService == nil ? ForexExchangeRateService(apiClient: commonContext.apiClient) : forexService!
         self.commonContext = commonContext
+        message = emptyStateMessage
         fetchProducts()
     }
 
     func addProductToCart(_ product: ProductViewModel) {
         productsInCart.items.append(product)
-        numberOfProductsInCart = productsInCart.items.count
+        updateProductsInCartCount()
     }
 
     func updateProductsInCartCount() {
@@ -46,10 +52,13 @@ final class ProductListViewModel: ObservableObject {
             return
         }
 
-        let pairName = baseCurrency+selectedCurrency.name
-        print(pairName)
+        let pairName = selectedCurrency.name+baseCurrency
         forexService.getExchangeRates(GetPairsDataRequest(pairName), results: { [weak self] (currencyRate, error) in
-            guard error == nil else { return }
+            guard error == nil else {
+                self?.message = error!
+                return
+            }
+
             if let currencyRate = currencyRate {
                 self?.calculatePricesWithRate(rate: currencyRate[pairName]?.rate)
             }
@@ -58,7 +67,11 @@ final class ProductListViewModel: ObservableObject {
 
     private func fetchProducts() {
         storeService.getProducts(GetProductsRequest(), results: { [weak self] (products, error) in
-            guard error == nil else { return }
+            guard error == nil else {
+                self?.message = error!
+                return
+            }
+            
             if let products = products {
                 guard let strSelf = self else { return }
                 strSelf.products = products.products
