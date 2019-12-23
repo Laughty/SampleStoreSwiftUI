@@ -13,7 +13,7 @@ protocol StoreServiceProtocol {
     func getProducts(_ request: GetProductsRequest, results: @escaping (GetProductsResponse?, String?) -> Void)
 }
 
-class StoreService: StoreServiceProtocol {
+final class StoreService: StoreServiceProtocol {
     let apiClient: ServiceProtocol
 
     init(apiClient: ServiceProtocol) {

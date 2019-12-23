@@ -9,7 +9,7 @@
 import XCTest
 @testable import SimpleStoreApp
 
-class ProductListTests: XCTestCase {
+final class ProductListTests: XCTestCase {
 
     var viewModel: ProductListViewModel!
     let storeServiceStub = StoreServiceStub()

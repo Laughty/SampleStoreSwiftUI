@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-class  CurrencyViewModel: Identifiable {
+final class  CurrencyViewModel: Identifiable {
 
     let id = UUID()
     let name: String

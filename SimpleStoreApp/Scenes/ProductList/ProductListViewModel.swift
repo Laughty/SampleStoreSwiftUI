@@ -61,7 +61,7 @@ final class ProductListViewModel: ObservableObject {
             }
 
             if let currencyRate = currencyRate {
-                self?.calculatePricesWithRate(rate: currencyRate[pairName]?.rate)
+                self?.calculatePrice(with: currencyRate[pairName]?.rate)
             }
         })
     }
@@ -81,7 +81,7 @@ final class ProductListViewModel: ObservableObject {
         })
     }
 
-    private func calculatePricesWithRate(rate: Double?) {
+    private func calculatePrice(with rate: Double?) {
         guard let rate = rate else { return }
         productsList = products.map({ ProductViewModel(product: $0, rate: rate) })
         productsInCart.items.forEach { $0.rate = rate }

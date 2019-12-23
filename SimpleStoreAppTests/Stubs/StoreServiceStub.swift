@@ -15,7 +15,7 @@ enum ServiceStoreTestingConfiguration {
     case successful
 }
 
-class StoreServiceStub: StoreServiceProtocol {
+final class StoreServiceStub: StoreServiceProtocol {
 
     var testingConfiguration: ServiceStoreTestingConfiguration = .successful
 

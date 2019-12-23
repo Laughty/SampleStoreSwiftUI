@@ -54,12 +54,12 @@ final class SummaryViewModel: ObservableObject {
                 self?.message = error!
                 return }
             if let currencyRate = currencyRate {
-                self?.calculatePricesWithRate(rate: currencyRate[pairName]?.rate)
+                self?.calculatePrices(with: currencyRate[pairName]?.rate)
             }
         })
     }
 
-    private func calculatePricesWithRate(rate: Double?) {
+    private func calculatePrices(with rate: Double?) {
         guard let rate = rate else { return }
         productsInCart.forEach { $0.rate = rate }
         updateFinalPrice()

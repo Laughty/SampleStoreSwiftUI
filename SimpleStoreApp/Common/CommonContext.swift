@@ -12,11 +12,11 @@ protocol CommonContext {
     var apiClient: ServiceProtocol { get }
 }
 
-class DefaultContext: CommonContext {
+final class DefaultContext: CommonContext {
 
     let apiClient: ServiceProtocol = NativeClient()
 }
 
-class TestingContext: CommonContext {
+final class TestingContext: CommonContext {
     let apiClient: ServiceProtocol = MockClient()
 }

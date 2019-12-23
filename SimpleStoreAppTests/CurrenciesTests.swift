@@ -9,7 +9,7 @@
 import XCTest
 @testable import SimpleStoreApp
 
-class CurrenciesTests: XCTestCase {
+final class CurrenciesTests: XCTestCase {
 
     var viewModel: CurrenciesViewModel!
     let forexServiceStub = ForexServiceStub()

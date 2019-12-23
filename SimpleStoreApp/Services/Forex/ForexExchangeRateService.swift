@@ -15,7 +15,7 @@ protocol ForexExchangeRateServiceProtocol {
                           results: @escaping ([String: CurrencyRate]?, String?) -> Void)
 }
 
-class ForexExchangeRateService: ForexExchangeRateServiceProtocol {
+final class ForexExchangeRateService: ForexExchangeRateServiceProtocol {
 
     let apiClient: ServiceProtocol
 

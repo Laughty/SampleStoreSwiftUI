@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-class  ProductViewModel: Identifiable {
+final class  ProductViewModel: Identifiable {
 
     let id = UUID()
 

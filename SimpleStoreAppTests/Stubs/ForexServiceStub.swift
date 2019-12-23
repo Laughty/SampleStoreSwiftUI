@@ -14,7 +14,7 @@ enum ServiceForexTestingConfiguration {
     case successful
 }
 
-class ForexServiceStub: ForexExchangeRateServiceProtocol {
+final class ForexServiceStub: ForexExchangeRateServiceProtocol {
 
     var testingConfiguration: ServiceForexTestingConfiguration = .successful
 

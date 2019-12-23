@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		571D16DA239293DC000436F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571D16D9239293DC000436F5 /* AppDelegate.swift */; };
 		571D16DC239293DC000436F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571D16DB239293DC000436F5 /* SceneDelegate.swift */; };
-		571D16DE239293DC000436F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571D16DD239293DC000436F5 /* ContentView.swift */; };
 		571D16E0239293DD000436F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 571D16DF239293DD000436F5 /* Assets.xcassets */; };
 		571D16E3239293DD000436F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 571D16E2239293DD000436F5 /* Preview Assets.xcassets */; };
 		571D16E6239293DD000436F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 571D16E4239293DD000436F5 /* LaunchScreen.storyboard */; };
@@ -68,7 +67,6 @@
 		571D16D6239293DC000436F5 /* SimpleStoreApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleStoreApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		571D16D9239293DC000436F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		571D16DB239293DC000436F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		571D16DD239293DC000436F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		571D16DF239293DD000436F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		571D16E2239293DD000436F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		571D16E5239293DD000436F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -166,7 +164,6 @@
 				571D1709239420DF000436F5 /* Services */,
 				571D16D9239293DC000436F5 /* AppDelegate.swift */,
 				571D16DB239293DC000436F5 /* SceneDelegate.swift */,
-				571D16DD239293DC000436F5 /* ContentView.swift */,
 				571D16DF239293DD000436F5 /* Assets.xcassets */,
 				571D16E4239293DD000436F5 /* LaunchScreen.storyboard */,
 				571D16E7239293DD000436F5 /* Info.plist */,
@@ -496,7 +493,6 @@
 				5798317C2399C12B00FFE3CA /* SummaryViewModel.swift in Sources */,
 				57AC3D4C239A457A0045FB8A /* SelectedCurrency.swift in Sources */,
 				57D892432395D43A00941DC7 /* GetPairsDataResponse.swift in Sources */,
-				571D16DE239293DC000436F5 /* ContentView.swift in Sources */,
 				579831812399C67D00FFE3CA /* CurrenciesViewModel.swift in Sources */,
 				571D172223947CB7000436F5 /* NativeClient.swift in Sources */,
 			);

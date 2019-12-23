@@ -9,7 +9,7 @@
 import XCTest
 @testable import SimpleStoreApp
 
-class SummaryTests: XCTestCase {
+final class SummaryTests: XCTestCase {
 
     var viewModel: SummaryViewModel!
     let forexServiceStub = ForexServiceStub()
