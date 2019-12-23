@@ -22,7 +22,6 @@ struct CurrenciesContext {
 final class CurrenciesViewModel: ObservableObject {
 
     private let emptyStateMessage = "Please wait... currencies are loading"
-
     private let baseCurrency: String
     private let forexService: ForexExchangeRateServiceProtocol
 
@@ -31,7 +30,8 @@ final class CurrenciesViewModel: ObservableObject {
 
     init(_ context: CurrenciesContext,
          forexService: ForexExchangeRateServiceProtocol? = nil) {
-        self.forexService = forexService == nil ? ForexExchangeRateService(apiClient: context.commonContext.apiClient) : forexService!
+        self.forexService = forexService == nil ?
+            ForexExchangeRateService(apiClient: context.commonContext.apiClient) : forexService!
         baseCurrency = context.baseCurrency
         message = emptyStateMessage
         fetchCurrencies()
@@ -43,7 +43,6 @@ final class CurrenciesViewModel: ObservableObject {
                 self?.message = error!
                 return
             }
-
             if let currencies = currencies {
                 self?.updateCurreciesList(with: currencies)
             }
@@ -51,8 +50,8 @@ final class CurrenciesViewModel: ObservableObject {
     }
 
     private func updateCurreciesList(with currencies: [String]) {
-        self.currencies = currencies.filter{ $0.contains(baseCurrency) }
-            .map{ CurrencyViewModel($0.replacingOccurrences(of: baseCurrency, with: "")) }
+        self.currencies = currencies.filter { $0.contains(baseCurrency) }
+            .map { CurrencyViewModel($0.replacingOccurrences(of: baseCurrency, with: "")) }
         self.currencies.insert(CurrencyViewModel(baseCurrency), at: 0)
     }
 }

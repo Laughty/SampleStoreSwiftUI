@@ -18,7 +18,8 @@ class ForexServiceStub: ForexExchangeRateServiceProtocol {
 
     var testingConfiguration: ServiceForexTestingConfiguration = .successful
 
-    func getAvailablePairs(_ request: GetAvailablePairsRequest, results: @escaping ([String]?, String?) -> ()) {
+    func getAvailablePairs(_ request: GetAvailablePairsRequest,
+                           results: @escaping ([String]?, String?) -> Void) {
         switch testingConfiguration {
         case .error:
             results(nil, "Bad error")
@@ -28,7 +29,8 @@ class ForexServiceStub: ForexExchangeRateServiceProtocol {
         }
     }
 
-    func getExchangeRates(_ request: GetPairsDataRequest, results: @escaping ([String : CurrencyRate]?, String?) -> ()) {
+    func getExchangeRates(_ request: GetPairsDataRequest,
+                          results: @escaping ([String: CurrencyRate]?, String?) -> Void) {
         switch testingConfiguration {
         case .error:
             results(nil, "Bad error")

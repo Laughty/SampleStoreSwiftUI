@@ -21,11 +21,11 @@ class  ProductViewModel: Identifiable {
     }
 
     var name: String {
-        return self.product.name
+        return product.name
     }
 
     var baseCurrency: String {
-        return self.product.baseCurrency
+        return product.baseCurrency
     }
 
     var price: String {

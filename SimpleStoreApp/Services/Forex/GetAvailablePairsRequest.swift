@@ -11,6 +11,6 @@ import Foundation
 struct GetAvailablePairsRequest: Request {
     var endpoint: String = "api/live"
     var requestType: HTTPRequestType = .GET
-    var params: [String : String]?
+    var params: [String: String]?
     var body: Data?
 }

@@ -22,10 +22,10 @@ class SimpleStoreAppUITests: XCTestCase {
 
     func testAddRemoveCartItems() {
         let tablesQuery = app.tables
-        let staticText = tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["0.95"]/*[[".cells.staticTexts[\"0.95\"]",".staticTexts[\"0.95\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        let staticText = tablesQuery.staticTexts["0.95"]
         staticText.tap()
         staticText.tap()
-        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Eggs"]/*[[".cells.staticTexts[\"Eggs\"]",".staticTexts[\"Eggs\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery.staticTexts["Eggs"].tap()
         XCTAssert(app.navigationBars["Awesome Store"].buttons["CART: 3"].waitForExistence(timeout: 0.5))
 
         app.navigationBars["Awesome Store"].buttons["CART: 3"].tap()
@@ -50,11 +50,11 @@ class SimpleStoreAppUITests: XCTestCase {
 
         let app = XCUIApplication()
         let tablesQuery = app.tables
-        let peasStaticText = tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Peas"]/*[[".cells.staticTexts[\"Peas\"]",".staticTexts[\"Peas\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        let peasStaticText = tablesQuery.staticTexts["Peas"]
         peasStaticText.tap()
         peasStaticText.tap()
 
-        let eggsStaticText = tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Eggs"]/*[[".cells.staticTexts[\"Eggs\"]",".staticTexts[\"Eggs\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        let eggsStaticText = tablesQuery.staticTexts["Eggs"]
         eggsStaticText.tap()
         eggsStaticText.tap()
 

@@ -17,7 +17,7 @@ enum CartBuilder {
   }
 }
 
-struct CartView : View {
+struct CartView: View {
 
     @EnvironmentObject var productsInCart: ShoppingCartItems
 
@@ -46,5 +46,3 @@ private extension CartView {
         }
     }
 }
-
-

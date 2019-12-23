@@ -32,7 +32,8 @@ final class ProductListViewModel: ObservableObject {
          storeService: StoreServiceProtocol? = nil,
          forexService: ForexExchangeRateServiceProtocol? = nil) {
         self.storeService =  storeService == nil ? StoreService(apiClient: commonContext.apiClient) : storeService!
-        self.forexService = forexService == nil ? ForexExchangeRateService(apiClient: commonContext.apiClient) : forexService!
+        self.forexService = forexService == nil ?
+            ForexExchangeRateService(apiClient: commonContext.apiClient) : forexService!
         self.commonContext = commonContext
         message = emptyStateMessage
         fetchProducts()
@@ -71,11 +72,11 @@ final class ProductListViewModel: ObservableObject {
                 self?.message = error!
                 return
             }
-            
+
             if let products = products {
-                guard let strSelf = self else { return }
-                strSelf.products = products.products
-                strSelf.baseCurrency = products.products.first?.baseCurrency ?? "USD"
+                guard let self = self else { return }
+                self.products = products.products
+                self.baseCurrency = products.products.first?.baseCurrency ?? "USD"
             }
         })
     }
@@ -106,5 +107,3 @@ extension ProductListViewModel {
     }
 
 }
-
-

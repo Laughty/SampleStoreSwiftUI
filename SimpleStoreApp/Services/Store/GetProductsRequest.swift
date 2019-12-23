@@ -11,6 +11,6 @@ import Foundation
 struct GetProductsRequest: Request {
     var endpoint: String = "api/products"
     var requestType: HTTPRequestType = .GET
-    var params: [String : String]?
+    var params: [String: String]?
     var body: Data?
 }

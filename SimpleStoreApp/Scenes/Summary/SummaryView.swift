@@ -16,7 +16,7 @@ enum SummaryBuilder {
   }
 }
 
-struct SummaryView : View {
+struct SummaryView: View {
 
     @EnvironmentObject var selectedCurrency: SelectedCurrency
 
@@ -58,10 +58,8 @@ private extension SummaryView {
     var summarySection: some View {
         Section {
             Text("FINAL PRICE IS: \(viewModel.finalPrice)")
-                .onAppear{
+                .onAppear {
                     self.viewModel.calculateRateForNewCurrency(selectedCurrency: self.selectedCurrency)}
         }
     }
 }
-
-

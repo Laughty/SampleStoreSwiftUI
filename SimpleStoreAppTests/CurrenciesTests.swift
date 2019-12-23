@@ -16,7 +16,8 @@ class CurrenciesTests: XCTestCase {
 
     override func setUp() {
         forexServiceStub.testingConfiguration = .successful
-        viewModel = CurrenciesViewModel(CurrenciesContext(TestingContext(), baseCurrency: "USD"), forexService: forexServiceStub)
+        viewModel = CurrenciesViewModel(CurrenciesContext(TestingContext(), baseCurrency: "USD"),
+                                        forexService: forexServiceStub)
     }
 
     override func tearDown() {}
@@ -33,8 +34,8 @@ class CurrenciesTests: XCTestCase {
 
     func testFetchCurrenciesFailure() {
         forexServiceStub.testingConfiguration = .error
-        viewModel = CurrenciesViewModel(CurrenciesContext(TestingContext(), baseCurrency: "USD"), forexService: forexServiceStub)
-        
+        viewModel = CurrenciesViewModel(CurrenciesContext(TestingContext(), baseCurrency: "USD"),
+                                        forexService: forexServiceStub)
         XCTAssert(viewModel.currencies.count == 0)
         XCTAssert(viewModel.message == "Bad error")
     }

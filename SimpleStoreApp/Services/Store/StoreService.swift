@@ -10,7 +10,7 @@ import Foundation
 
 protocol StoreServiceProtocol {
 
-    func getProducts(_ request: GetProductsRequest, results: @escaping (GetProductsResponse?, String?) -> ())
+    func getProducts(_ request: GetProductsRequest, results: @escaping (GetProductsResponse?, String?) -> Void)
 }
 
 class StoreService: StoreServiceProtocol {
@@ -20,7 +20,7 @@ class StoreService: StoreServiceProtocol {
         self.apiClient = apiClient
     }
 
-    func getProducts(_ request: GetProductsRequest, results: @escaping (GetProductsResponse?, String?) -> ()) {
+    func getProducts(_ request: GetProductsRequest, results: @escaping (GetProductsResponse?, String?) -> Void) {
 
         var products: [Product] = []
         products.append(Product(name: "Peas", price: 0.95, baseCurrency: "USD"))

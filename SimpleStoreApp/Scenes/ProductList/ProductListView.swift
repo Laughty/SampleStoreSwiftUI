@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-struct ProductListView : View {
+struct ProductListView: View {
 
     @EnvironmentObject var selectedCurrency: SelectedCurrency
 
@@ -33,8 +33,7 @@ struct ProductListView : View {
             }.navigationBarItems(leading:
                 NavigationLink(destination: viewModel.summaryView) {
                     Text("Checkout")
-                }
-                ,trailing:
+                }, trailing:
                 NavigationLink(destination: viewModel.cartView) {
                     Text("CART: \(viewModel.numberOfProductsInCart)")
                 }
@@ -69,11 +68,10 @@ private extension ProductListView {
                 }.onTapGesture {
                     self.viewModel.addProductToCart(product)
                 }
-            }.onAppear{
+            }.onAppear {
                 self.viewModel.calculateRateForNewCurrency(selectedCurrency: self.selectedCurrency)
                 self.viewModel.updateProductsInCartCount()
             }
         }
     }
 }
-

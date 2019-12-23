@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 import SwiftUI
 import Combine
 
@@ -17,7 +16,7 @@ enum CurrenciesBuilder {
   }
 }
 
-struct CurrenciesView : View {
+struct CurrenciesView: View {
 
     @EnvironmentObject var selectedCurrency: SelectedCurrency
 
@@ -50,7 +49,7 @@ extension CurrenciesView {
 
     var selectedCurrencySection: some View {
         Section {
-            Text(self.selectedCurrency.name).padding()
+            Text(selectedCurrency.name).padding()
         }
     }
 
@@ -64,4 +63,3 @@ extension CurrenciesView {
         }
     }
 }
-

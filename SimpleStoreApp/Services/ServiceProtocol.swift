@@ -10,5 +10,5 @@ import Foundation
 
 protocol ServiceProtocol {
 
-    func performRequest<T: Codable>(_ reqeust: Request, results: @escaping (Result<T>) -> ())
+    func performRequest<T: Codable>(_ reqeust: Request, results: @escaping (Result<T>) -> Void)
 }

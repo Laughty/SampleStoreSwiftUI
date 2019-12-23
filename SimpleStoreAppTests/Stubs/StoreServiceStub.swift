@@ -19,7 +19,7 @@ class StoreServiceStub: StoreServiceProtocol {
 
     var testingConfiguration: ServiceStoreTestingConfiguration = .successful
 
-    func getProducts(_ request: GetProductsRequest, results: @escaping (GetProductsResponse?, String?) -> ()) {
+    func getProducts(_ request: GetProductsRequest, results: @escaping (GetProductsResponse?, String?) -> Void) {
         switch testingConfiguration {
         case .error:
             results(nil, "Bad error")

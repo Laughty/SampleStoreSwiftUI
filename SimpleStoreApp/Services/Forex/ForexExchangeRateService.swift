@@ -9,9 +9,10 @@
 import Foundation
 
 protocol ForexExchangeRateServiceProtocol {
-    
-    func getAvailablePairs(_ request: GetAvailablePairsRequest, results: @escaping ([String]?, String?) -> ())
-    func getExchangeRates(_ request: GetPairsDataRequest, results: @escaping ([String:CurrencyRate]?, String?) -> ())
+
+    func getAvailablePairs(_ request: GetAvailablePairsRequest, results: @escaping ([String]?, String?) -> Void)
+    func getExchangeRates(_ request: GetPairsDataRequest,
+                          results: @escaping ([String: CurrencyRate]?, String?) -> Void)
 }
 
 class ForexExchangeRateService: ForexExchangeRateServiceProtocol {
@@ -22,9 +23,8 @@ class ForexExchangeRateService: ForexExchangeRateServiceProtocol {
         self.apiClient = apiClient
     }
 
-    func getAvailablePairs(_ request: GetAvailablePairsRequest, results: @escaping ([String]?, String?) -> ()) {
-
-        let responseClosure: (Result<GetAvailablePairsResponse>) -> () = { response in
+    func getAvailablePairs(_ request: GetAvailablePairsRequest, results: @escaping ([String]?, String?) -> Void) {
+        let responseClosure: (Result<GetAvailablePairsResponse>) -> Void = { response in
             switch response {
             case .success(let result):
                 results(result.supportedPairs, nil)
@@ -37,9 +37,9 @@ class ForexExchangeRateService: ForexExchangeRateServiceProtocol {
         apiClient.performRequest(request, results: responseClosure)
     }
 
-    func getExchangeRates(_ request: GetPairsDataRequest, results: @escaping ([String:CurrencyRate]?, String?) -> ()) {
-
-        let responseClosure: (Result<GetPairsDataResponse>) -> () = { response in
+    func getExchangeRates(_ request: GetPairsDataRequest,
+                          results: @escaping ([String: CurrencyRate]?, String?) -> Void) {
+        let responseClosure: (Result<GetPairsDataResponse>) -> Void = { response in
             switch response {
             case .success(let result):
                 results(result.rates, nil)

@@ -12,20 +12,17 @@ import SwiftUI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    
     var commonContext: CommonContext!
-    
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
+
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession,
+               options connectionOptions: UIScene.ConnectionOptions) {
         if ProcessInfo.processInfo.arguments.contains("STORE_UI_TESTING") {
             commonContext = TestingContext()
         } else {
             commonContext = DefaultContext()
         }
-        
+
         let productListView = ProductListView(commonContext).environmentObject(SelectedCurrency())
-        
-        // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             window.rootViewController = UIHostingController(rootView: productListView)
@@ -34,4 +31,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
     }
 }
-

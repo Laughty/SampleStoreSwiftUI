@@ -97,13 +97,11 @@ class ProductListTests: XCTestCase {
         let selectedCurrency = SelectedCurrency()
         selectedCurrency.name = "EUR"
         forexServiceStub.testingConfiguration = .error
-        
         viewModel.calculateRateForNewCurrency(selectedCurrency: selectedCurrency)
 
         XCTAssertFalse(viewModel.productsList[0].price == "0.72")
         XCTAssertFalse(viewModel.productsInCart.items[0].price == "0.72")
         XCTAssert(viewModel.message == "Bad error")
     }
-
 
 }

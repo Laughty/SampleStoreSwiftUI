@@ -14,7 +14,7 @@ struct SummaryContext {
     let baseCurrency: String
     let productsInCart: [ProductViewModel]
 
-    init(_ commonContext: CommonContext, productsInCart: [ProductViewModel], baseCurrency: String){
+    init(_ commonContext: CommonContext, productsInCart: [ProductViewModel], baseCurrency: String) {
         self.commonContext = commonContext
         self.baseCurrency = baseCurrency
         self.productsInCart = productsInCart
@@ -32,14 +32,14 @@ final class SummaryViewModel: ObservableObject {
     @Published var message: String = ""
 
     init(_ context: SummaryContext,
-     forexService: ForexExchangeRateServiceProtocol? = nil) {
-        self.forexService = forexService == nil ? ForexExchangeRateService(apiClient: context.commonContext.apiClient) : forexService!
+         forexService: ForexExchangeRateServiceProtocol? = nil) {
+        self.forexService = forexService == nil ?
+            ForexExchangeRateService(apiClient: context.commonContext.apiClient) : forexService!
         self.commonContext = context.commonContext
         self.baseCurrency = context.baseCurrency
         self.productsInCart = context.productsInCart
         updateFinalPrice()
     }
-
 
     func calculateRateForNewCurrency(selectedCurrency: SelectedCurrency) {
         updateFinalPrice()
